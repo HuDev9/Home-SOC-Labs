@@ -1,0 +1,42 @@
+SOC Home Lab — Network Topology (source diagram)
+==================================================
+
+                         192.168.1.0/24  (Bridged Networking)
+
+  +----------------------+        +------------------------+        +---------------------------+
+  |   Kali Linux          |        |  Windows 11 Home        |        |  Ubuntu Server 24.04       |
+  |   (Attacker)           |        |  (Victim)                |        |  (SIEM)                     |
+  |   192.168.1.122        |        |  192.168.1.188           |        |  192.168.1.125              |
+  |                         |        |                          |        |                              |
+  |                         |  --->  |  Sysmon                  |  --->  |  Splunk Enterprise           |
+  |                         |        |  Splunk Universal         |  TCP   |  - Splunk Web                |
+  |                         |        |  Forwarder                 |  9997  |  - Receiving port 9997       |
+  +----------------------+        +------------------------+        |  - Indexes (main)            |
+                                                                        |  - Search & Reporting        |
+                                                                        +---------------------------+
+
+Data flow
+---------
+Windows Logs (Application / Security / System)
+      |
+      v
+Sysmon (Event ID 1 - Process Creation, etc.)
+      |
+      v
+Splunk Universal Forwarder
+      | TCP 9997
+      v
+Splunk Enterprise (index=main)
+      |
+      v
+Detection & Investigation (SPL)
+
+Notes
+-----
+This file is the plain-text source for the architecture diagram rendered in:
+  - README.md (top-level)
+  - architecture/README.md
+  - dashboard/ (rendered as an interactive SVG/HTML diagram)
+
+Keeping a plain-text source means the diagram can be regenerated in any tool
+(draw.io, Excalidraw, Mermaid, etc.) without losing the underlying topology.
