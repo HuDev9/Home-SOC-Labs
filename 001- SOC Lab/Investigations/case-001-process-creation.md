@@ -1,7 +1,7 @@
 # Case 001 — Sysmon Process Creation
 
 **Status:** Closed — expected activity, pipeline validated
-**Host:** Windows 11 Home victim (`192.168.1.188`)
+**Host:** Windows 11 Home victim (`192.168.x.xxx`)
 **Related simulation:** [Attack Simulation 1](../attack-simulations/attack-01-process-creation-validation.md)
 **Related detection:** [Detection 1 — Process Creation Monitoring](../detections/detection-01-process-creation.md)
 
