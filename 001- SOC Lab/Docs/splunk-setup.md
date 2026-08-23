@@ -1,6 +1,6 @@
 # Splunk Setup Notes
 
-## Splunk Enterprise (Ubuntu Server 24.04 — `192.168.1.125`)
+## Splunk Enterprise (Ubuntu Server 24.04 — `192.168.x.xxx`)
 
 **Installed:** Splunk Enterprise
 
@@ -16,20 +16,20 @@
 - Searches returning expected fields (`_time`, `User`, `Image`, `ParentImage`, `CommandLine`, `EventCode`, etc.)
 - Basic dashboards built on top of the core detections
 
-## Splunk Universal Forwarder (Windows 11 Home — `192.168.1.188`)
+## Splunk Universal Forwarder (Windows 11 Home — `192.168.x.xxx`)
 
 **Installed:** Splunk Universal Forwarder
 
 **Configured:**
 - `inputs.conf` — see [`configs/inputs.conf`](../configs/inputs.conf) — collecting Application, Security, System, and Sysmon/Operational Windows Event Log channels into `index=main`
-- `outputs.conf` — see [`configs/outputs.conf`](../configs/outputs.conf) — forwarding to `192.168.1.125:9997`
+- `outputs.conf` — see [`configs/outputs.conf`](../configs/outputs.conf) — forwarding to `192.168.x.xxx:xxxx`
 
 **Verified:**
 ```text
 > splunk list forward-server
 
 Active forwards:
-        192.168.1.125:9997
+        192.168.x.xxx:xxxx
 ```
 
 Successfully sent both Windows Events and Sysmon Events to the Splunk indexer.
