@@ -6,7 +6,7 @@ Confirm, with real activity, that the Sysmon → Universal Forwarder → Splunk 
 
 ## Method
 
-On the Windows 11 victim (`192.168.1.188`), manually launched three processes chosen to represent distinct categories:
+On the Windows 11 victim (`192.168.x.x`), manually launched three processes chosen to represent distinct categories:
 
 ```text
 notepad.exe      — benign GUI application
