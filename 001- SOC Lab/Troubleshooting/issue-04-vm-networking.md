@@ -7,7 +7,7 @@ Intermittent and, in some cases, total ping failures between the lab VMs — mos
 ## Troubleshooting steps
 
 1. **Verified Bridged Adapter configuration** on each VM in VirtualBox — confirmed all three guests were actually attached to the bridged adapter (rather than accidentally left on NAT or Host-only, which would explain isolation between guests).
-2. **Verified IP addresses** on each VM matched what was expected for the `192.168.1.0/24` segment, and that no two VMs had landed on conflicting addresses.
+2. **Verified IP addresses** on each VM matched what was expected for the `192.168.x.x/xx` segment, and that no two VMs had landed on conflicting addresses.
 3. **Tested connectivity directly** with `ping` between each pair of VMs to isolate which specific links were failing rather than assuming the whole network was down.
 4. **Investigated Windows Firewall** on the victim machine — Windows' default firewall profile can silently block inbound ICMP (ping) and other traffic even when the underlying network path is fine, which made this a necessary check once basic adapter/IP configuration was ruled out.
 
