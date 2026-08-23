@@ -1,8 +1,8 @@
 # Case 003 — Brute Force Detection
 
 **Status:** Closed — simulated attack, detection validated
-**Host:** Windows 11 Home victim (`192.168.1.188`)
-**Source:** Kali Linux attacker (`192.168.1.122`)
+**Host:** Windows 11 Home victim (`192.168.x.xxx`)
+**Source:** Kali Linux attacker (`192.168.x.xxx`)
 **Related simulation:** [Attack Simulation 2 — RDP Brute Force Detection Lab](../attack-simulations/attack-02-rdp-brute-force.md)
 **Related detections:** [Detection 3 — Brute Force](../detections/detection-03-brute-force.md), [Detection 4 — Successful Authentication](../detections/detection-04-successful-auth.md)
 
