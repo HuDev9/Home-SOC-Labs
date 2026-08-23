@@ -1,7 +1,7 @@
 # Case 004 — Reverse Shell Detection
 
 **Status:** Closed — gap analysis
-**Host:** Windows 11 Home victim (`192.168.1.188`)
+**Host:** Windows 11 Home victim (`192.168.x.xxx`)
 **Related simulation:** [Attack Simulation 3 — Weaponization](../attack-simulations/attack-03-weaponization.md)
 
 ## Summary
