@@ -6,7 +6,7 @@ Native Windows Security auditing can tell you a logon happened. It can't reliabl
 
 ## Installation
 
-Installed Sysmon (Sysinternals) on the Windows 11 Home victim (`192.168.1.188`).
+Installed Sysmon (Sysinternals) on the Windows 11 Home victim (`192.168.x.xxx`).
 
 ## Verification — local, before touching Splunk
 
