@@ -1,16 +1,16 @@
 SOC Home Lab — Network Topology (source diagram)
 ==================================================
 
-                         192.168.1.0/24  (Bridged Networking)
+                         192.168.1.x/xx  (Bridged Networking)
 
   +----------------------+        +------------------------+        +---------------------------+
   |   Kali Linux          |        |  Windows 11 Home        |        |  Ubuntu Server 24.04       |
   |   (Attacker)           |        |  (Victim)                |        |  (SIEM)                     |
-  |   192.168.1.122        |        |  192.168.1.188           |        |  192.168.1.125              |
+  |   192.168.xx.xxx        |        |  192.168.x.xxx           |        |  192.168.x.xxx              |
   |                         |        |                          |        |                              |
   |                         |  --->  |  Sysmon                  |  --->  |  Splunk Enterprise           |
   |                         |        |  Splunk Universal         |  TCP   |  - Splunk Web                |
-  |                         |        |  Forwarder                 |  9997  |  - Receiving port 9997       |
+  |                         |        |  Forwarder                 |  xxxx  |  - Receiving port xxxx       |
   +----------------------+        +------------------------+        |  - Indexes (main)            |
                                                                         |  - Search & Reporting        |
                                                                         +---------------------------+
