@@ -6,7 +6,7 @@ Generate real failed and successful RDP authentication events against the Window
 
 ## Attack methodology
 
-From Kali Linux (`192.168.1.122`), targeted the Windows victim's RDP service (`192.168.1.188`):
+From Kali Linux (`192.168.x.x`), targeted the Windows victim's RDP service (`192.168.x.x`):
 
 1. Attempted a series of RDP logons using incorrect credentials to generate a burst of failed authentication events.
 2. Followed the failed attempts with a correct-credential logon to generate a successful authentication event, deliberately positioned immediately after the failures — mirroring the real-world pattern of a brute force that eventually succeeds.
